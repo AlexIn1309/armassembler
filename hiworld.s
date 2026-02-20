@@ -1,50 +1,18 @@
-.global _main
-.align 4
+.global _start
 
-_main:
-    // PRINT MESSAGE
-    ADRP    X0, message@PAGE
-    ADD X0, X0, message@PAGEOFF
-    BL  _printf
+.section .text
+_start:
+    // write(1, msg, len)
+    mov x0, #1          // stdout
+    ldr x1, =msg        // dirección del mensaje
+    mov x2, #14         // longitud
+    mov x8, #64         // syscall write (Linux ARM64)
+    svc #0
 
-    BL read_from_keyboard
+    // exit(0)
+    mov x0, #0
+    mov x8, #93         // syscall exit
+    svc #0
 
-    // READ NUMBER FROM DATA AND MOVE TO STACK FOR PRINTING
-    ADRP    X10, num@PAGE
-    ADD X10, X10, num@PAGEOFF
-    LDR X1, [X10]
-    STR X1, [SP, #-16]!
-
-    // LOAD THE PRINTF FORMATTED MESSAGE
-    ADRP    X0, output_format@PAGE
-    ADD X0, X0, output_format@PAGEOFF
-
-end:
-    BL  _printf
-    mov X16, #1
-    svc 0
-
-read_from_keyboard:
-    STP X29, X30, [SP, #-16]!
-
-    ADRP    X0, input_format@PAGE
-    ADD X0, X0, input_format@PAGEOFF
-    ADRP    X11, num@PAGE
-    ADD X11, X11, num@PAGEOFF
-    STR X11, [SP, #-16]!
-    BL _scanf
-    ADD SP, SP, #16
-
-    LDP X29, X30, [SP], #16
-    ret
-
-
-.data
-.balign 4
-message:    .asciz "What is your favorite number?\n"
-.balign 4
-num:    .word 32
-.balign 4
-input_format:   .asciz "%d"
-.balign 4
-output_format:  .asciz "Your favorite number is %d \n"
+.section .data
+msg: .ascii "Hola ARM64!\n"
