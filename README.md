@@ -17,3 +17,14 @@ ld program.o -o program
 ## 4. Conversión de grados Celsius a Fahrenheit
 
 ## 5. Factorial de un número
+
+# Comparadores
+
+Existe como if else que se puede implementar con instrucciones de comparación y saltos condicionales. Por ejemplo, para comparar dos números y ejecutar diferentes bloques de código según el resultado, se pueden usar las instrucciones `CMP` (comparar) y `BNE` (saltar si no son iguales) o `BEQ` (saltar si son iguales).
+
+    cmp x0, x1         // Comparar x0 y x1
+    b.eq equal         // Si son iguales, saltar a 'equal'
+
+# Mayor que
+
+-
