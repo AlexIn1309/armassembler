@@ -49,5 +49,5 @@ Existe como if else que se puede implementar con instrucciones de comparación y
 
 - sumarnumeros.s /  Lee 10 numeros y mostrar el resultado de la suma
 
--
+- saludar.s / Leer el nombre en pantalla y saluda
  
