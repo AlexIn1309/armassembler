@@ -8,15 +8,15 @@ as program.s -o program.o
 ld program.o -o program
 ./program
 
-## 1. Suma de dos números
+- 1. Suma de dos números
 
-## 2. Resta de dos números
+- 2. Resta de dos números
 
-## 3. Resto de la división de dos números
+- 3. Resto de la división de dos números
 
-## 4. Conversión de grados Celsius a Fahrenheit
+- 4. Conversión de grados Celsius a Fahrenheit
 
-## 5. Factorial de un número
+- 5. Factorial de un número
 
 # Comparadores
 
@@ -27,26 +27,27 @@ Existe como if else que se puede implementar con instrucciones de comparación y
 
 # ARCHIVOS CREADOS
 
-## apuntes.md Generamos una guia con algunos nemonicos y sus funciones, ademas de un pequeño glosario
+- apuntes.md Generamos una guia con algunos nemonicos y sus funciones, ademas de un pequeño glosario
 
-## hiworld.s Imprimimos Hola ARM64
+- hiworld.s / Imprime Hola ARM64
 
-## leer.s Recibimos string del usuario y se imprime
+- leer.s /  Recibe string del usuario y se imprime
 
-## suma.s Hacemos uso directo del codigo ASCII para imprimir
+- suma.s / Hace uso directo del codigo ASCII para imprimir
 
-## suma2.s Imprimimos con buffer la string
+- suma2.s /  Imprime con buffer la string
 
-## multiplicacion.s multiplicamos dos numeros con mul y lo imprimimos por pantalla
+- multiplicacion.s /  Multiplica dos numeros con mul y lo imprimimos por pantalla
 
-## igual.s Usamos cmp para comparar dos numeros 
+- igual.s /  Usa cmp para comparar dos numeros 
 
-## menorque.s Hacemos uso del comparador con flag 
+- menorque.s /  Hace uso del comparador con flag 
 
-## resta.s Realiza la resta de dos numeros y los imprime
+- resta.s /  Realiza la resta de dos numeros y los imprime
 
-## imprimir09.s Ciclo imprime los numeros del 0 al 9
+- imprimir09.s /  Ciclo imprime los numeros del 0 al 9
 
-## sumarnumeros.s Leer 10 numeros y mostrar el resultado de la suma
+- sumarnumeros.s /  Lee 10 numeros y mostrar el resultado de la suma
 
-## 
+-
+ 
