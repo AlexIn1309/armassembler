@@ -7,9 +7,9 @@ newline: .asciz "\n"
 
 .text
 _main:
-  mov x10, #5
-  mov x11, #10
-  add x12, x10, x11
+  mov x10, #5	// numero 1
+  mov x11, #10	// numero 2
+  add x12, x10, x11	// suma de num 1 y num 2
 
   // Reservar buffer alineado en la pila
   sub sp, sp, #16
